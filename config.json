@@ -164,7 +164,7 @@
             {
                 "name": "ljspeech",
                 "path": "C:\\Users\\avaer\\Documents\\GitHub\\TTS\\",
-                "meta_file_train": "metadata2.csv", // for vtck if list, ignore speakers id in list for train, its useful for test cloning with new speakers
+                "meta_file_train": "metadata4.csv", // for vtck if list, ignore speakers id in list for train, its useful for test cloning with new speakers
                 "meta_file_val": null
             }
         ]
