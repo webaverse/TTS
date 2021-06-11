@@ -20,7 +20,7 @@ const wavFileNames = fs.readdirSync(`/mnt/c/Users/avaer/Documents/Image-Line/FL 
 		  return null;
 		}
 	})
-	.filte(l => !!l)
+	.filter(l => !!l)
 	.sort((a, b) => a.sortName.localeCompare(b.sortName))
 	.map(o => o.l);
 
