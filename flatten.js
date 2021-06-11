@@ -4,18 +4,23 @@ const fs = require('fs');
 const wavFileNames = fs.readdirSync(`/mnt/c/Users/avaer/Documents/Image-Line/FL Studio/Audio/Rendered`)
   .filter(l => /\.wav$/.test(l))
   .map(l => {
-	  const match = l.match(/^(story)([0-9]+)( - Track )([0-9]+)(\.wav)$/);
-	  const sortName =
-		  match[1] +
-		  match[2].padStart(3, '0') +
-			match[3] +
-			match[4].padStart(3, '0') +
-			match[5];
-	  return {
-		  l,
-			sortName,
-		};
+	  const match = l.match(/^(tale)([0-9]+)( - Track )([0-9]+)(\.wav)$/);
+	  if (match) {
+			const sortName =
+				match[1] +
+				match[2].padStart(3, '0') +
+				match[3] +
+				match[4].padStart(3, '0') +
+				match[5];
+			return {
+				l,
+				sortName,
+			};
+	  } else {
+		  return null;
+		}
 	})
+	.filte(l => !!l)
 	.sort((a, b) => a.sortName.localeCompare(b.sortName))
 	.map(o => o.l);
 
