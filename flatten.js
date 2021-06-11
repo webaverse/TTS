@@ -24,7 +24,7 @@ const wavFileNames = fs.readdirSync(`/mnt/c/Users/avaer/Documents/Image-Line/FL 
 	.sort((a, b) => a.sortName.localeCompare(b.sortName))
 	.map(o => o.l);
 
-const s = fs.readFileSync('./mp34/manuscript.txt', 'utf8');
+const s = fs.readFileSync('./mp35/manuscript.txt', 'utf8');
 const ls = s.replace(/\r\n/g, '\n')
   .split('\n')
 	.filter(l => /\S+/.test(l))
