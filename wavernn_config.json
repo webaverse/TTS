@@ -18,7 +18,7 @@
         "trim_db": 60, // threshold for timming silence. Set this according to your dataset.
         // MelSpectrogram parameters
         "num_mels": 80, // size of the mel spec frame.
-        "mel_fmin": 40.0, // minimum freq level for mel-spec. ~50 for male and ~95 for female voices. Tune for dataset!!
+        "mel_fmin": 95.0, // minimum freq level for mel-spec. ~50 for male and ~95 for female voices. Tune for dataset!!
         "mel_fmax": 8000.0, // maximum freq level for mel-spec. Tune for dataset!!
         "spec_gain": 20.0, // scaler value appplied after log transform of spectrogram.
         // Normalization parameters
@@ -58,7 +58,7 @@
 
 // DATASET
     //"use_gta": true,								// use computed gta features from the tts model
-    "data_path": "/home/erogol/Data/libritts/LibriTTS/train-clean-360/", // path containing training wav files
+    "data_path": "C:\\Users\\avaer\\Documents\\GitHub\\TTS\\wavs\\", // path containing training wav files
     "feature_path": null, // path containing computed features from wav files if null compute them
     "seq_len": 1280, // has to be devideable by hop_length
     "padding": 2, // pad the input for resnet to see wider input length
@@ -84,7 +84,7 @@
 // TENSORBOARD and LOGGING
     "print_step": 25, // Number of steps to log traning on console.
     "print_eval": false, // If True, it prints loss values for each step in eval run.
-    "save_step": 25000, // Number of training steps expected to plot training stats on TB and save model checkpoints.
+    "save_step": 2500, // Number of training steps expected to plot training stats on TB and save model checkpoints.
     "checkpoint": true, // If true, it saves checkpoints per "save_step"
     "tb_model_param_stats": false, // true, plots param stats per layer on tensorboard. Might be memory consuming, but good for debugging.
 
@@ -94,5 +94,5 @@
     "eval_split_size": 50, // number of samples for testing
 
 // PATHS
-    "output_path": "/home/erogol/Models/LJSpeech/"
+    "output_path": "C:\\Users\\avaer\\Documents\\GitHub\\TTS\\output\\"
 }
