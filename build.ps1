@@ -3,6 +3,6 @@
 
 pushd /mnt/c/Users/avaer/Documents/Image-Line/FL\ Studio/Audio/Rendered/;
 for f in *; do
-  echo -i "$f" -ac 1 wavs/${f%%.*}.wav
+  ffmpeg -i "$f" -ac 1 -ar 24000 "/mnt/c/Users/avaer/Documents/GitHub/TTS/wavs/${f%%.*}.wav"
 done;
 podp;
